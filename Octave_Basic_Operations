@@ -1,0 +1,50 @@
+Octave
+PS1('>> ')
+
+% BASIC OPERATIONS
+m = # training examples
+n = # features
+
+theta = [0; 1]      % vector = 2 x 1 --> 2 rows, 1 column
+0
+1
+
+theta = [0  1]      % matrix = 1 x 2 --> 1 row, 2 columns
+0 1 
+
+
+A = [1 2; 3 4; 5 6]   % nothing between elements --> matrix
+A = ones(4,5)		% must use () NOT []
+A
+who			% lists variables in current scope
+whos			% lists variables in current scope with details
+A(3,2)
+A(3,2) = 152
+A(2,:)            % returns 2nd row all elements
+A(:,2)            % returns 2nd column all elements
+
+A = [1 2 3; 4 5 6; 7 8 9; 10 11 12]
+A([1 3],:)        % returns 1st and 3rd rows with : for all column elements
+A([4],:)          % returns 4th rows
+A([4,1,:])        % returns 4th row then 1st row in this order
+A([1 3],:)        % returns rows 1 and 3 only, all elements
+A(1:4, 1:2)       % returns rows 1 to 4, then columns 1 and 2
+C = ones(8,9)	    % returns 8 by 9 grid of 1s
+A = ones(10,10)   % returns 10 by 10 grid of 1sA
+A(:,2)            % returns 2nd column
+A(:,2) = [19 20 21] % replaces 2nd columns with new column
+size(A)
+A = [A, [400; 401; 402; 403]]       % appends new column
+A = [A, [5000; 5001; 5002; 5003]]   % appends new column
+B(:)        % returns matrix as a single column A= vector. Appends col by col
+D = A(:)    % creates D vector from matrix A
+[A B]       % returns A concatenated with B
+[A,B]       % returns A concatenated with B, same
+A*C
+
+
+A = [16 2 3 13; 5 11 10 8; 9 7 6 12; 4 14 15 1];
+want to return B as = [16 2; 5 11; 9 7; 4 14] 
+(A is 4x4; want B to return 4x2) of the 1st two rows
+B = A(:, 1:2)
+B = A(1:4, 1:2)
